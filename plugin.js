@@ -92,7 +92,7 @@ if(requestURL.indexOf(addLink) != -1){  // 添加外部播放器链接
   });
 }else if(requestURL.indexOf(embyPlguin) != -1){  // 打开外部播放器
   let isSurge = typeof $httpClient != "undefined";
-  let LocationURL = requestURL.split(embyPlguin)[1];
+  let LocationURL = requestURL.split('emby/plugin/scheme/')[1];
   let modifiedStatus = 'HTTP/1.1 302 Found';
   if(isSurge){
     modifiedStatus = 302;
