@@ -51,12 +51,12 @@ if(requestURL.indexOf(addLink) != -1){  // 添加外部播放器链接
 
       infusePlay.push({
         Url: host + embyPlguin + 'infuse://x-callback-url/play?url='+ encodeURIComponent(videoUrl),
-        Name: 'Infuse'+ Name
+        Name: 'Infuse - '+ Name
       });
 
       nplayerPlay.push({
         Url: host + embyPlguin + 'nplayer-'+ videoUrl,
-        Name: 'nPlayer'+ Name
+        Name: 'nPlayer - '+ Name
       });
 
       vlcPlay.push({
@@ -80,7 +80,7 @@ if(requestURL.indexOf(addLink) != -1){  // 添加外部播放器链接
 
       shuDownload.push({
         Url: host + embyPlguin + 'shu://gui.download.http?urls='+ encodeURIComponent(JSON.stringify(shuInfo)),
-        Name: 'Shu'+ Name
+        Name: 'Shu - '+ Name
       });
     });
   }
